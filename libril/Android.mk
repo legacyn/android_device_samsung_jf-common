@@ -21,7 +21,10 @@ LOCAL_SHARED_LIBRARIES := \
     libhardware_legacy \
     librilutils \
     android.hardware.radio@1.0 \
+<<<<<<< HEAD
     android.hardware.radio@1.1 \
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     android.hardware.radio.deprecated@1.0 \
     libhidlbase  \
     libhidltransport \
@@ -30,10 +33,17 @@ LOCAL_SHARED_LIBRARIES := \
 LOCAL_STATIC_LIBRARIES := \
     libprotobuf-c-nano-enable_malloc \
 
+<<<<<<< HEAD
 LOCAL_CFLAGS += -Wall -Wextra -Wno-unused-parameter -Werror
 
 ifeq ($(SIM_COUNT), 2)
     LOCAL_CFLAGS += -DANDROID_MULTI_SIM
+=======
+LOCAL_CFLAGS += -Wno-unused-parameter
+
+ifeq ($(SIM_COUNT), 2)
+    LOCAL_CFLAGS += -DANDROID_MULTI_SIM -DDSDA_RILD1
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     LOCAL_CFLAGS += -DANDROID_SIM_COUNT_2
 endif
 

@@ -16,7 +16,11 @@
 
 #define LOG_TAG "RIL_SAP"
 
+<<<<<<< HEAD
 #include <android/hardware/radio/1.1/ISap.h>
+=======
+#include <android/hardware/radio/1.0/ISap.h>
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 
 #include <hwbinder/IPCThreadState.h>
 #include <hwbinder/ProcessState.h>
@@ -42,7 +46,11 @@ sp<SapImpl> sapService[SIM_COUNT];
 sp<SapImpl> sapService[1];
 #endif
 
+<<<<<<< HEAD
 struct SapImpl : public android::hardware::radio::V1_1::ISap {
+=======
+struct SapImpl : public ISap {
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     int32_t slotId;
     sp<ISapCallback> sapCallback;
     RIL_SOCKET_ID rilSocketId;
@@ -532,6 +540,10 @@ Return<void> SapImpl::setTransferProtocolReq(int32_t token, SapTransferProtocol 
 
 void *sapDecodeMessage(MsgId msgId, MsgType msgType, uint8_t *payloadPtr, size_t payloadLen) {
     void *responsePtr = NULL;
+<<<<<<< HEAD
+=======
+    bool decodeStatus = false;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     pb_istream_t stream;
 
     /* Create the stream */
@@ -775,6 +787,7 @@ void processResponse(MsgHeader *rsp, RilSapSocket *sapSocket, MsgType msgType) {
         return;
     }
 
+<<<<<<< HEAD
     if (messagePtr == NULL) {
         RLOGE("processResponse: *messagePtr == NULL; msgId = %d; msgType = %d",
                 msgId, msgType);
@@ -782,6 +795,8 @@ void processResponse(MsgHeader *rsp, RilSapSocket *sapSocket, MsgType msgType) {
         return;
     }
 
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     RLOGD("processResponse: sapCallback != NULL; msgId = %d; msgType = %d",
             msgId, msgType);
 

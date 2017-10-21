@@ -114,8 +114,17 @@ RIL_RadioFunctions s_callbacks = {0, NULL, NULL, NULL, NULL, NULL};
 static int s_registerCalled = 0;
 
 static pthread_t s_tid_dispatch;
+<<<<<<< HEAD
 static int s_started = 0;
 
+=======
+static pthread_t s_tid_reader;
+static int s_started = 0;
+
+static int s_fdDebug = -1;
+static int s_fdDebug_socket2 = -1;
+
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static int s_fdWakeupRead;
 static int s_fdWakeupWrite;
 
@@ -124,30 +133,62 @@ int s_wakelock_count = 0;
 static struct ril_event s_wakeupfd_event;
 
 static pthread_mutex_t s_pendingRequestsMutex = PTHREAD_MUTEX_INITIALIZER;
+<<<<<<< HEAD
+=======
+static pthread_mutex_t s_writeMutex = PTHREAD_MUTEX_INITIALIZER;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static pthread_mutex_t s_wakeLockCountMutex = PTHREAD_MUTEX_INITIALIZER;
 static RequestInfo *s_pendingRequests = NULL;
 
 #if (SIM_COUNT >= 2)
 static pthread_mutex_t s_pendingRequestsMutex_socket2  = PTHREAD_MUTEX_INITIALIZER;
+<<<<<<< HEAD
+=======
+static pthread_mutex_t s_writeMutex_socket2            = PTHREAD_MUTEX_INITIALIZER;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static RequestInfo *s_pendingRequests_socket2          = NULL;
 #endif
 
 #if (SIM_COUNT >= 3)
 static pthread_mutex_t s_pendingRequestsMutex_socket3  = PTHREAD_MUTEX_INITIALIZER;
+<<<<<<< HEAD
+=======
+static pthread_mutex_t s_writeMutex_socket3            = PTHREAD_MUTEX_INITIALIZER;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static RequestInfo *s_pendingRequests_socket3          = NULL;
 #endif
 
 #if (SIM_COUNT >= 4)
 static pthread_mutex_t s_pendingRequestsMutex_socket4  = PTHREAD_MUTEX_INITIALIZER;
+<<<<<<< HEAD
 static RequestInfo *s_pendingRequests_socket4          = NULL;
 #endif
 
+=======
+static pthread_mutex_t s_writeMutex_socket4            = PTHREAD_MUTEX_INITIALIZER;
+static RequestInfo *s_pendingRequests_socket4          = NULL;
+#endif
+
+static struct ril_event s_wake_timeout_event;
+static struct ril_event s_debug_event;
+
+
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static const struct timeval TIMEVAL_WAKE_TIMEOUT = {ANDROID_WAKE_LOCK_SECS,ANDROID_WAKE_LOCK_USECS};
 
 
 static pthread_mutex_t s_startupMutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t s_startupCond = PTHREAD_COND_INITIALIZER;
 
+<<<<<<< HEAD
+=======
+static pthread_mutex_t s_dispatchMutex = PTHREAD_MUTEX_INITIALIZER;
+static pthread_cond_t s_dispatchCond = PTHREAD_COND_INITIALIZER;
+
+static RequestInfo *s_toDispatchHead = NULL;
+static RequestInfo *s_toDispatchTail = NULL;
+
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 static UserCallbackInfo *s_last_wake_timeout_info = NULL;
 
 static void *s_lastNITZTimeData = NULL;
@@ -417,6 +458,12 @@ extern "C" void RIL_setcallbacks (const RIL_RadioFunctions *callbacks) {
 
 extern "C" void
 RIL_register (const RIL_RadioFunctions *callbacks) {
+<<<<<<< HEAD
+=======
+    int ret;
+    int flags;
+
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     RLOGI("SIM_COUNT: %d", SIM_COUNT);
 
     if (callbacks == NULL) {
@@ -552,7 +599,13 @@ checkAndDequeueRequestInfoIfAck(struct RequestInfo *pRI, bool isAck) {
 extern "C" void
 RIL_onRequestAck(RIL_Token t) {
     RequestInfo *pRI;
+<<<<<<< HEAD
 
+=======
+    int ret;
+
+    size_t errorOffset;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     RIL_SOCKET_ID socket_id = RIL_SOCKET_1;
 
     pRI = (RequestInfo *)t;
@@ -586,6 +639,10 @@ extern "C" void
 RIL_onRequestComplete(RIL_Token t, RIL_Errno e, void *response, size_t responselen) {
     RequestInfo *pRI;
     int ret;
+<<<<<<< HEAD
+=======
+    size_t errorOffset;
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
     RIL_SOCKET_ID socket_id = RIL_SOCKET_1;
 
     pRI = (RequestInfo *)t;
@@ -803,7 +860,11 @@ void RIL_onUnsolicitedResponse(int unsolResponse, const void *data,
     }
 
 #if VDBG
+<<<<<<< HEAD
     RLOGI("%s UNSOLICITED: %s length:%zu", rilSocketIdToString(soc_id),
+=======
+    RLOGI("%s UNSOLICITED: %s length:%d", rilSocketIdToString(soc_id),
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
             requestToString(unsolResponse), datalen);
 #endif
 
@@ -931,7 +992,11 @@ failCauseToString(RIL_Errno e) {
         case RIL_E_SIM_FULL: return "E_SIM_FULL";
         case RIL_E_NETWORK_REJECT: return "E_NETWORK_REJECT";
         case RIL_E_OPERATION_NOT_ALLOWED: return "E_OPERATION_NOT_ALLOWED";
+<<<<<<< HEAD
         case RIL_E_EMPTY_RECORD: return "E_EMPTY_RECORD";
+=======
+        case RIL_E_EMPTY_RECORD: "E_EMPTY_RECORD";
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
         case RIL_E_INVALID_SMS_FORMAT: return "E_INVALID_SMS_FORMAT";
         case RIL_E_ENCODING_ERR: return "E_ENCODING_ERR";
         case RIL_E_INVALID_SMSC_ADDRESS: return "E_INVALID_SMSC_ADDRESS";
@@ -1146,7 +1211,10 @@ requestToString(int request) {
         case RIL_REQUEST_GET_ACTIVITY_INFO: return "GET_ACTIVITY_INFO";
         case RIL_REQUEST_SET_CARRIER_RESTRICTIONS: return "SET_CARRIER_RESTRICTIONS";
         case RIL_REQUEST_GET_CARRIER_RESTRICTIONS: return "GET_CARRIER_RESTRICTIONS";
+<<<<<<< HEAD
         case RIL_REQUEST_SET_CARRIER_INFO_IMSI_ENCRYPTION: return "SET_CARRIER_INFO_IMSI_ENCRYPTION";
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
         case RIL_RESPONSE_ACKNOWLEDGEMENT: return "RESPONSE_ACKNOWLEDGEMENT";
         case RIL_UNSOL_RESPONSE_RADIO_STATE_CHANGED: return "UNSOL_RESPONSE_RADIO_STATE_CHANGED";
         case RIL_UNSOL_RESPONSE_CALL_STATE_CHANGED: return "UNSOL_RESPONSE_CALL_STATE_CHANGED";
@@ -1192,7 +1260,10 @@ requestToString(int request) {
         case RIL_UNSOL_DC_RT_INFO_CHANGED: return "UNSOL_DC_RT_INFO_CHANGED";
         case RIL_UNSOL_RADIO_CAPABILITY: return "UNSOL_RADIO_CAPABILITY";
         case RIL_UNSOL_MODEM_RESTART: return "UNSOL_MODEM_RESTART";
+<<<<<<< HEAD
         case RIL_UNSOL_CARRIER_INFO_IMSI_ENCRYPTION: return "UNSOL_CARRIER_INFO_IMSI_ENCRYPTION";
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
         case RIL_UNSOL_ON_SS: return "UNSOL_ON_SS";
         case RIL_UNSOL_STK_CC_ALPHA_NOTIFY: return "UNSOL_STK_CC_ALPHA_NOTIFY";
         case RIL_UNSOL_LCEDATA_RECV: return "UNSOL_LCEDATA_RECV";
@@ -1224,4 +1295,8 @@ rilSocketIdToString(RIL_SOCKET_ID socket_id)
     }
 }
 
+<<<<<<< HEAD
 } /* namespace android */
+=======
+} /* namespace android */
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo

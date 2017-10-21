@@ -199,6 +199,7 @@ int getAvailableNetworksResponse(int slotId,
                                 int responseType, int serial, RIL_Errno e, void *response,
                                 size_t responselen);
 
+<<<<<<< HEAD
 int startNetworkScanResponse(int slotId,
                              int responseType, int serial, RIL_Errno e, void *response,
                              size_t responselen);
@@ -207,6 +208,8 @@ int stopNetworkScanResponse(int slotId,
                             int responseType, int serial, RIL_Errno e, void *response,
                             size_t responselen);
 
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 int startDtmfResponse(int slotId,
                      int responseType, int serial, RIL_Errno e, void *response,
                      size_t responselen);
@@ -541,6 +544,7 @@ int setSimCardPowerResponse(int slotId,
                               int responseType, int serial, RIL_Errno e,
                               void *response, size_t responselen);
 
+<<<<<<< HEAD
 int startKeepaliveResponse(int slotId,
                            int responseType, int serial, RIL_Errno e,
                            void *response, size_t responselen);
@@ -549,6 +553,8 @@ int stopKeepaliveResponse(int slotId,
                           int responseType, int serial, RIL_Errno e,
                           void *response, size_t responselen);
 
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 void acknowledgeRequest(int slotId, int serial);
 
 int radioStateChangedInd(int slotId,
@@ -717,6 +723,7 @@ int modemResetInd(int slotId,
                   int indicationType, int token, RIL_Errno e, void *response,
                   size_t responselen);
 
+<<<<<<< HEAD
 int networkScanResultInd(int slotId,
                          int indicationType, int token, RIL_Errno e, void *response,
                          size_t responselen);
@@ -725,6 +732,8 @@ int keepaliveStatusInd(int slotId,
                        int indicationType, int token, RIL_Errno e, void *response,
                        size_t responselen);
 
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 int sendRequestRawResponse(int slotId,
                            int responseType, int serial, RIL_Errno e,
                            void *response, size_t responseLen);
@@ -733,6 +742,7 @@ int sendRequestStringsResponse(int slotId,
                                int responseType, int serial, RIL_Errno e,
                                void *response, size_t responseLen);
 
+<<<<<<< HEAD
 int setCarrierInfoForImsiEncryptionResponse(int slotId,
                                             int responseType, int serial, RIL_Errno e,
                                             void *response, size_t responseLen);
@@ -741,8 +751,14 @@ int carrierInfoForImsiEncryption(int slotId,
                         int responseType, int serial, RIL_Errno e,
                         void *response, size_t responseLen);
 
+=======
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
 pthread_rwlock_t * getRadioServiceRwlock(int slotId);
 
 }   // namespace radio
 
+<<<<<<< HEAD
 #endif  // RIL_SERVICE_H
+=======
+#endif  // RIL_SERVICE_H
+>>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
