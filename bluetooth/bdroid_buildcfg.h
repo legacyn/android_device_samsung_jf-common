@@ -1,6 +1,7 @@
 /*
  * Copyright (C) 2012 The Android Open Source Project
  * Copyright (C) 2012 The CyanogenMod Project <http://www.cyanogenmod.org>
+ * Copyright (C) 2016 The JDCTeam
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +21,6 @@
 
 #define BTM_DEF_LOCAL_NAME   "Samsung Galaxy S IV"
 
-#define BTA_SKIP_BLE_READ_REMOTE_FEAT TRUE
-#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
+#define BTA_DISABLE_DELAY 100 /* in milliseconds */
 
 #endif

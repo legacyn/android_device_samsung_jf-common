@@ -8,7 +8,7 @@ persist.audio.fluence.voicecall=true
 qcom.hw.aac.encoder=true
 ro.qc.sdk.audio.fluencetype=fluence
 use.dedicated.device.for.voip=true
-use.voice.path.for.pcm.voip=false
+use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
@@ -37,9 +37,6 @@ camera.disable_treble=true
 # NFC
 ro.nfc.port=I2C
 
-# OMX properties
-persist.media.treble_omx=false
-
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 
@@ -53,9 +50,7 @@ persist.radio.apm_sim_not_pwdn=1
 persist.radio.fill_eons=1
 persist.radio.use_se_table_only=1
 ro.telephony.mms_data_profile=5
-persist.radio.add_power_save=1
-persist.radio.apm_sim_not_pwdn=1
-rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
+ro.telephony.ril_class=jflteRIL
 
 # Tethering
 net.tethering.noprovisioning=true
