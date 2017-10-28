@@ -290,6 +290,7 @@
          NOTE: This requires additional hardware-specific code. -->
 <!--    <bool name="config_uiBlurEnabled">true</bool> -->
 
+    <!-- Keep chosen default camera app pinned in memory for faster launching -->
     <bool name="config_pinnerCameraApp">true</bool>
 
     <!-- If this is true, the screen will fade off. -->
@@ -306,5 +307,6 @@
         <item>"/system/framework/arm/boot-core-libart.oat"</item>
         <item>"/system/framework/arm/boot-core-libart.vdex"</item>
     </string-array>
+
 
 </resources>
