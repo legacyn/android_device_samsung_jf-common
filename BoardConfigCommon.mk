@@ -25,6 +25,9 @@
 # Inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
+# ADB
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
 COMMON_PATH := device/samsung/jf-common
 
 # inherit from the proprietary version
