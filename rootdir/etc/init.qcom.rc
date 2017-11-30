@@ -414,7 +414,7 @@ service insthk /system/vendor/bin/insthk
 on property:sys.qseecomd.enable=true
     start insthk
 
-service irsc_util /system/vendor/bin/irsc_util "/etc/sec_config"
+service irsc_util /system/vendor/bin/irsc_util "/system/vendor/etc/sec_config"
     class main
     user root
     oneshot
