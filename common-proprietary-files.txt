@@ -155,7 +155,7 @@ lib/hw/sensorhubs.msm8960.so
 vendor/lib/libstlport.so|e61ef21decc21472e06eacc841e7d61bf68ca9f3
 
 # Thermal
-bin/thermal-engine
+bin/thermald
 lib/libthermalclient.so
 
 # Time services
