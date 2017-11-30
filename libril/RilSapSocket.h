@@ -36,8 +36,6 @@
  */
 class RilSapSocket : public RilSocket {
     /**
-<<<<<<< HEAD
-=======
      * Function pointer to the ril initialization funtion.
      *
      * @param Ril environment variable with place request and
@@ -54,7 +52,6 @@ class RilSapSocket : public RilSocket {
     RIL_RadioFunctions *(*UimInit)(const struct RIL_Env *, int argc, char **argv);
 
     /**
->>>>>>> 3c217ce... Sync with AOSP-JF-MM repo
      * Place holder for the radio functions returned by the initialization
      * function. Currenty only onRequest handler is being used.
      */
@@ -217,3 +214,4 @@ class RilSapSocket : public RilSocket {
 };
 
 #endif /*RIL_UIM_SOCKET_H_INCLUDED*/
+
