@@ -51,9 +51,6 @@ on init
     export EXTERNAL_STORAGE /sdcard
 
 on fs
-    wait /dev/block/platform/${ro.boot.bootdevice}
-    symlink /dev/block/platform/${ro.boot.bootdevice} /dev/block/bootdevice
-
     mount_all fstab.qcom
 
     chown system radio /dev/block/platform/msm_sdcc.1/by-name
