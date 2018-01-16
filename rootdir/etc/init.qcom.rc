@@ -406,7 +406,7 @@ service insthk /system/vendor/bin/insthk
     user root
     disabled
     oneshot
-    seclabel u:r:insthk_exec:s0
+    seclabel u:r:insthk:s0
 
 on property:sys.qseecomd.enable=true
     start insthk
@@ -450,7 +450,7 @@ service wpa_supplicant /vendor/bin/hw/wpa_supplicant \
 service macloader /system/bin/macloader
     class main
     oneshot
-    seclabel u:r:macloader_exec:s0
+    seclabel u:r:macloader:s0
 
 on property:init.svc.macloader=stopped
     chown root system /data/.rev
