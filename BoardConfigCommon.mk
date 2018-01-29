@@ -30,6 +30,9 @@ COMMON_PATH := device/samsung/jf-common
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 
+# ADB (Legacy f_adb)
+TARGET_USES_LEGACY_ADB_INTERFACE := true
+
 # Architecture
 TARGET_CPU_VARIANT := krait
 
