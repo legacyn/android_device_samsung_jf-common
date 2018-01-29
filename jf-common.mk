@@ -96,7 +96,7 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl.legacy \
-    camera.device@1.0-impl.legacy
+    camera.device@1.0-impl.legacy \
     Snap \
     camera.msm8960
 
@@ -210,10 +210,6 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
-
-# Shims
-PRODUCT_PACKAGES += \
-    libshim_atomic
 
 # SPN override
 PRODUCT_COPY_FILES += \
