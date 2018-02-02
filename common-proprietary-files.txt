@@ -131,8 +131,8 @@ lib/libI420colorconvert.so
 lib/libmm-color-convertor.so
 
 # NFC firmware
-vendor/firmware/bcm2079xB4_firmware.ncd
-vendor/firmware/bcm2079xB4_pre_firmware.ncd
+#vendor/firmware/bcm2079xB4_firmware.ncd
+#vendor/firmware/bcm2079xB4_pre_firmware.ncd
 
 # Perf
 bin/mpdecision
