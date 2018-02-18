@@ -27,8 +27,6 @@
 
 COMMON_PATH := device/samsung/jf-common
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/jf-common/include
-
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
 
