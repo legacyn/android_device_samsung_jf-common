@@ -203,7 +203,6 @@
          config to 7. -->
 <!--    <integer name="config_deviceHardwareKeys">83</integer> -->
 
-
     <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
          This integer should equal the sum of the corresponding value for each
          of the following keys present:
@@ -283,7 +282,7 @@
 
     <!-- If this is true, the screen will fade off. -->
     <bool name="config_animateScreenLights">true</bool>
-
+    
      <!-- Default list of files pinned by the Pinner Service -->
      <string-array translatable="false" name="config_defaultPinnerServiceFiles">
         <item>"/system/framework/arm/boot-framework.oat"</item>
