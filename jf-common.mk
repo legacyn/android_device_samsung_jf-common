@@ -87,7 +87,7 @@ PRODUCT_PACKAGES += \
     libbt-vendor
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
+    $(LOCAL_PATH)/bluetooth/bcm4335_prepatch.hcd:$(TARGET_COPY_OUT_VENDOR)/firmware/bcm4335_prepatch.hcd
 
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
