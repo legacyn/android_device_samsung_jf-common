@@ -962,4 +962,3 @@ void sap::registerService(RIL_RadioFunctions *callbacks) {
         RLOGD("registerService: started ISap %s status %d", serviceNames[i], status);
     }
 }
-

@@ -48,4 +48,3 @@ LOCAL_SANITIZE := integer
 include $(BUILD_SHARED_LIBRARY)
 
 endif # BOARD_PROVIDES_LIBRIL
-
