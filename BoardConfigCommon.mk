@@ -25,6 +25,7 @@
 # Inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
+TARGET_SPECIFIC_HEADER_PATH += device/samsung/jf-common/include
 # ADB
 TARGET_USES_LEGACY_ADB_INTERFACE := true
 
@@ -45,8 +46,7 @@ TARGET_CPU_VARIANT := krait
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 zcache msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -70,7 +70,12 @@ BOARD_HAVE_BLUETOOTH_BCM := true
 # Camera
 TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
-#Legacy hacks
+
+# dexpreopt
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
+
+# Legacy hacks
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 MALLOC_SVELTE := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
@@ -102,13 +107,6 @@ TARGET_NO_RPC := true
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
-
-# Legacy Hacks
-BOARD_GLOBAL_CFLAGS += -DDECAY_TIME_DEFAULT=0
-MALLOC_SVELTE := true
-TARGET_HAS_LEGACY_CAMERA_HAL1 := true
-TARGET_NEEDS_GCC_LIBC := true
-TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 
 # NFC
 #BOARD_NFC_HAL_SUFFIX := msm8960
