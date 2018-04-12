@@ -190,7 +190,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.msm8960
+    android.hardware.power@1.0-impl
 
 # Default OMX service to non-Treble
 PRODUCT_PROPERTY_OVERRIDES += \
