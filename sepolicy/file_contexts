@@ -8,5 +8,5 @@
 /dev/btlock                                        u:object_r:bluetooth_dev:s0
 
 # Needed by NFC
-#/dev/bcm2079x                                              u:object_r:nfc_device:s0
+/dev/bcm2079x                                              u:object_r:nfc_device:s0
 
