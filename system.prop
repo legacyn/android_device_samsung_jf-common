@@ -12,6 +12,7 @@ use.voice.path.for.pcm.voip=true
 
 # Bluetooth
 ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
+persist.bt.enableAptXHD=true
 
 # Charger
 ro.enable_boot_charger_mode=1
@@ -20,7 +21,7 @@ ro.enable_boot_charger_mode=1
 debug.hwui.use_buffer_age=false
 debug.composition.type=c2d
 ro.opengles.version=196608
-ro.sf.lcd_density=480
+ro.sf.lcd_density=420
 
 # GPS
 persist.gps.qc_nlp_in_use=1
@@ -59,3 +60,7 @@ ro.build.shutdown_timeout=5
 
 # WiFi
 wifi.interface=wlan0
+
+
+# RR
+ro.rr.maintainer=Buff Buffster (Buff99)
