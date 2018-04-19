@@ -63,4 +63,4 @@ wifi.interface=wlan0
 
 
 # RR
-ro.rr.maintainer=Buff Buffster (Buff99)
+# ro.rr.maintainer=Buff Buffster (Buff99)
