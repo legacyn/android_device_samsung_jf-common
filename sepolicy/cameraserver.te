@@ -6,3 +6,5 @@ allow cameraserver system_file:file execmod;
 allow cameraserver system_prop:property_service set;
 allow cameraserver tmpfs:dir search;
 
+allow cameraserver vendor_file:file execmod;
+

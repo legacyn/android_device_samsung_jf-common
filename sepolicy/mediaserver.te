@@ -3,3 +3,6 @@ allow mediaserver system_file:file execmod;
 allow mediaserver system_data_file:sock_file write;
 allow mediaserver audio_device:chr_file rw_file_perms;
 
+allow mediaserver vendor_file:file execmod;
+allow mediaserver camera_socket:sock_file write;
+allow mediaserver mm-qcamerad:unix_dgram_socket sendto;
