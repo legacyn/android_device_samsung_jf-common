@@ -27,9 +27,6 @@
     <!-- The green LED is brighter than red, bias closer to yellow. -->
     <integer name="config_notificationsBatteryMediumARGB">0xFFFF6000</integer>
 
-    <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
-    <bool name="config_unplugTurnsOnScreen">true</bool>
-
     <!-- Array of light sensor LUX values to define our levels for auto backlight brightness support.
          The N entries of this array define N  1 zones as follows:
 
@@ -41,11 +38,19 @@
 
          Must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLevels">
-        <item>40</item>
+        <item>2</item>
+        <item>7</item>
+        <item>15</item>
+        <item>50</item>
+        <item>100</item>
         <item>200</item>
-        <item>450</item>
-        <item>1400</item>
+        <item>400</item>
+        <item>1000</item>
+        <item>2000</item>
+        <item>3000</item>
         <item>5000</item>
+        <item>10000</item>
+        <item>30000</item>
     </integer-array>
 
     <!-- Array of output values for LCD backlight corresponding to the LUX values
@@ -53,12 +58,20 @@
          than the size of the config_autoBrightnessLevels array.
          This must be overridden in platform specific overlays -->
     <integer-array name="config_autoBrightnessLcdBacklightValues">
-        <item>15</item>
-        <item>30</item>
-        <item>55</item>
-        <item>90</item>
-        <item>255</item>
-        <item>255</item>
+        <item>13</item>   <!-- 0-2 -->
+        <item>25</item>   <!-- 3-7 -->
+        <item>32</item>   <!-- 5-15 -->
+        <item>41</item>   <!-- 15-50 -->
+        <item>52</item>   <!-- 50-100 -->
+        <item>62</item>   <!-- 100-200 -->
+        <item>69</item>   <!-- 200-400 -->
+        <item>78</item>   <!-- 400-1000 -->
+        <item>88</item>   <!-- 1000-2000 -->
+        <item>134</item>  <!-- 2000-3000 -->
+        <item>178</item>  <!-- 3000-5000 -->
+        <item>225</item>  <!-- 5000-10000 -->
+        <item>255</item>  <!-- 10000-30000 -->
+        <item>255</item>  <!-- 30000+ -->
     </integer-array>
 
     <!-- Array of output values for button backlight corresponding to the LUX values
@@ -72,6 +85,14 @@
         <item>1</item>
         <item>1</item>
         <item>1</item>
+        <item>1</item>
+        <item>1</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
+        <item>0</item>
     </integer-array>
 
     <!-- XXXXX NOTE THE FOLLOWING RESOURCES USE THE WRONG NAMING CONVENTION.
