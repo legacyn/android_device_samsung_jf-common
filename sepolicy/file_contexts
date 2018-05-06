@@ -17,4 +17,5 @@
 /sys/devices/platform/kgsl-3d0.0/kgsl/kgsl-3d0/reset_count          u:object_r:sysfs_thermal:s0
 
 # Camera
-/data/cam_socket[0-9]                                      u:object_r:camera_socket:s0
+/data/cam_socket(.*)                                       u:object_r:camera_socket:s0
+/dev/rawchip(.*)                                           u:object_r:mm-qcamerad_device:s0
