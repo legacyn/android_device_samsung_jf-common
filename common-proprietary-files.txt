@@ -5,10 +5,14 @@ lib/libadsprpc.so
 lib/libacdbloader.so
 lib/libaudcal.so
 lib/libcsd-client.so
-vendor/lib/libaptX_encoder.so
+
+# AptX
+lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
+lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so
+lib/libaptXScheduler.so
 
 # Bluetooth firmware
-vendor/firmware/bcm4335.hcd
+firmware/bcm4335.hcd
 
 # Camera
 bin/mm-qcamera-daemon
@@ -91,30 +95,30 @@ lib/libgps.utils.so
 lib/libloc_api_v02.so
 lib/libloc_eng.so
 lib/libloc_core.so
-vendor/lib/libgeofence.so
-vendor/lib/libizat_core.so
-vendor/lib/liblbs_core.so
+lib/libgeofence.so
+lib/libizat_core.so
+lib/liblbs_core.so
 
 # Graphics
-vendor/lib/egl/eglsubAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so
-vendor/lib/libOpenCL.so
-vendor/lib/libRSDriver_adreno.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libbccQTI.so
-vendor/lib/libc2d30-a3xx.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-qcom.so
-vendor/lib/librs_adreno.so
-vendor/lib/librs_adreno_sha1.so
-vendor/lib/libsc-a3xx.so
-vendor/lib/libscale.so
-vendor/lib/libuiblur.so
+lib/egl/eglsubAndroid.so
+lib/egl/libEGL_adreno.so
+lib/egl/libGLESv1_CM_adreno.so
+lib/egl/libGLESv2_adreno.so
+lib/egl/libq3dtools_adreno.so
+lib/libC2D2.so
+lib/libCB.so
+lib/libOpenCL.so
+lib/libRSDriver_adreno.so
+lib/libadreno_utils.so
+lib/libbccQTI.so
+lib/libc2d30-a3xx.so
+lib/libgsl.so
+lib/libllvm-qcom.so
+lib/librs_adreno.so
+lib/librs_adreno_sha1.so
+lib/libsc-a3xx.so
+lib/libscale.so
+lib/libuiblur.so
 
 # Graphics firmware
 etc/firmware/a300_pfp.fw
@@ -131,12 +135,12 @@ lib/libI420colorconvert.so
 lib/libmm-color-convertor.so
 
 # NFC firmware
-vendor/firmware/bcm2079xB4_firmware.ncd
-vendor/firmware/bcm2079xB4_pre_firmware.ncd
+firmware/bcm2079xB4_firmware.ncd
+firmware/bcm2079xB4_pre_firmware.ncd
 
 # Perf
 bin/mpdecision
-vendor/lib/libqti-perfd-client.so
+lib/libqti-perfd-client.so
 
 # Qualcomm framework
 bin/irsc_util
@@ -153,7 +157,7 @@ lib/hw/sensors.msm8960.so
 lib/hw/sensorhubs.msm8960.so
 
 # STLPort
-vendor/lib/libstlport.so
+lib/libstlport.so
 
 # Thermal
 bin/thermald
@@ -164,11 +168,11 @@ lib/libthermalclient.so
 lib/libTimeService.so|7200435a98567bdb589034ab110fff73d2773c3d
 
 # Widevine
-vendor/lib/drm/libdrmwvmplugin.so|3bee766222895f524421eb996ca6a08bcf95f19f
-vendor/lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
-vendor/lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207
-vendor/lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
-vendor/lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
+lib/drm/libdrmwvmplugin.so|3bee766222895f524421eb996ca6a08bcf95f19f
+lib/libwvdrm_L1.so|3eaf8ed1cb337608a1ccdb80d2c95804e7aea323
+lib/libwvm.so|59c4c078f4b897ddac8f665309b7a3f25522f207
+lib/libWVStreamControlAPI_L1.so|6b28492ac55b9a3d86993343cf2c8b55240b3420
+lib/mediadrm/libwvdrmengine.so|6bdcc4d59b07ccbdd7b07a99677406ade3d2e232
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin
