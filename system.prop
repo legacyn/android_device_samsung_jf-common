@@ -12,7 +12,6 @@ use.voice.path.for.pcm.voip=false
 
 # Bluetooth
 ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
-persist.bt.enableAptXHD=true
 
 # Charger
 ro.enable_boot_charger_mode=1
