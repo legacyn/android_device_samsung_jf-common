@@ -62,6 +62,8 @@ BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 
+TARGET_EXFAT_DRIVER := exfat
+
 # Audio
 BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
