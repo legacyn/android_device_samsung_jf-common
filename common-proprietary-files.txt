@@ -7,9 +7,7 @@ lib/libaudcal.so
 lib/libcsd-client.so
 
 # AptX
-lib/libaptX-1.0.0-rel-Android21-ARMv7A.so
-lib/libaptXHD-1.0.0-rel-Android21-ARMv7A.so
-lib/libaptXScheduler.so
+lib/libaptX_encoder.so
 
 # Bluetooth firmware
 firmware/bcm4335.hcd
