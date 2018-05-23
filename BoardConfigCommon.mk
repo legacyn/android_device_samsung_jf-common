@@ -25,15 +25,15 @@
 # Inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
-TARGET_SPECIFIC_HEADER_PATH += device/samsung/jf-common/include
-
-# ADB
-TARGET_USES_LEGACY_ADB_INTERFACE := true
+# inherit from the proprietary version
+-include vendor/samsung/jf-common/BoardConfigVendor.mk
 
 COMMON_PATH := device/samsung/jf-common
 
-# inherit from the proprietary version
--include vendor/samsung/jf-common/BoardConfigVendor.mk
+TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
+
+# ADB
+TARGET_USES_LEGACY_ADB_INTERFACE := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
