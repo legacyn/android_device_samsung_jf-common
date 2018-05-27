@@ -94,6 +94,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/bluetooth/bcm4335_prepatch.hcd:system/vendor/firmware/bcm4335_prepatch.hcd
 
+# Browser
+PRODUCT_PACKAGES += \
+    Jelly
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8960 \
