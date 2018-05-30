@@ -266,7 +266,7 @@
         <item>"/system/framework/arm/boot.vdex"</item>
         <item>"/system/framework/arm/boot-core-libart.oat"</item>
         <item>"/system/framework/arm/boot-core-libart.vdex"</item>
-    </string-array> -->
+    </string-array>
 
     <bool name="config_button_brightness_support">true</bool>
 
