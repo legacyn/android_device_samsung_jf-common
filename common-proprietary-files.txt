@@ -7,7 +7,7 @@ vendor/lib/libaudcal.so
 vendor/lib/libcsd-client.so
 
 # AptX
-vendor/lib/libaptX_encoder.so
+vendor/lib/libaptX_encoder.so|b03772672144d4b750a5672c2922aded93bb0512
 
 # Bluetooth firmware
 vendor/firmware/bcm4335.hcd
