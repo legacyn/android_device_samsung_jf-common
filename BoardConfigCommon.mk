@@ -115,6 +115,7 @@ TARGET_NO_RPC := true
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
