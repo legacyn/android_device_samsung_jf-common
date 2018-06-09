@@ -1,2 +1,1 @@
 allow thermal-engine self:capability chown;
-

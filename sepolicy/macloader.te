@@ -5,4 +5,3 @@ init_daemon_domain(macloader)
 allow macloader efs_file:file { getattr open read };
 allow macloader self:capability { chown fowner fsetid };
 allow macloader wifi_data_file:file { getattr open setattr write };
-
