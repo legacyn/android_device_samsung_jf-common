@@ -285,13 +285,13 @@
     <bool name="config_enableAutoPowerModes">true</bool>
 
     <!-- Operating volatage for bluetooth controller. -->
-    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
+    <!-- <integer name="config_bluetooth_operating_voltage_mv">3300</integer> -->
 
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
+    <!-- <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool> -->
 
     <!-- Boolean indicating if current platform supports bluetooth wide band speech -->
-        <!-- <bool name="config_bluetooth_wide_band_speech">true</bool> -->
+    <!-- <bool name="config_bluetooth_wide_band_speech">true</bool> -->
 
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
