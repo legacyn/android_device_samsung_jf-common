@@ -7,8 +7,10 @@ vendor/lib/libaudcal.so
 vendor/lib/libcsd-client.so
 
 # AptX
-vendor/lib/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
-vendor/lib/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+lib/libaptX_encoder.so
+lib/libaptXHD_encoder.so
+vendor/lib/libaptX_encoder.so
+vendor/lib/libaptXHD_encoder.so
 
 # Bluetooth firmware
 vendor/firmware/bcm4335.hcd
@@ -125,7 +127,8 @@ vendor/bin/insthk
 vendor/lib/libhdcp2.so
 
 # Ldac
-vendor/lib/libldacBT_enc.so|6b9ad026c3e4dcd5cba654bd7b3848a0446f4e8c
+lib/libldacBT_enc.so
+vendor/lib/libldacBT_enc.so
 
 # Media
 vendor/lib/libI420colorconvert.so
