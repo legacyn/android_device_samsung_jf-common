@@ -8,12 +8,8 @@ LOCAL_SRC_FILES := \
     CameraWrapper.cpp
 
 LOCAL_SHARED_LIBRARIES := \
-    libhardware \
-    liblog \
-    libcamera_client \
-    libutils \
-    libgui \
-    android.hidl.token@1.0-utils \
+    libhardware liblog libcamera_client libutils \
+    libgui android.hidl.token@1.0-utils \
 
 LOCAL_STATIC_LIBRARIES := libarect libbase
 
