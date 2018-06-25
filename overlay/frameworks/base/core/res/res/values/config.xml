@@ -270,7 +270,7 @@
 
     <bool name="config_button_brightness_support">true</bool>
 
-    <integer name="config_button_brightness_default">128</integer>
+    <integer name="config_button_brightness_default">10</integer>
 
     <!-- Enable Night display, which requires HWC 2.0. -->
     <bool name="config_nightDisplayAvailable">true</bool>
@@ -296,8 +296,8 @@
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
-    <!-- True if camera app should be pinned via Pinner Service -->
-    <bool name="config_pinnerCameraApp">true</bool>
+    <!-- True if camera app should be pinned via Pinner Service
+    <bool name="config_pinnerCameraApp">true</bool> -->
 
     <!-- Boolean indicating whether or not to revert to default country code when cellular
          radio is unable to find any MCC information to infer wifi country code from -->
