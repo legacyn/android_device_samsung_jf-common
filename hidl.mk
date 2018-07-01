@@ -39,7 +39,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.mapper@2.0-impl
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -66,10 +67,6 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     android.hardware.light@2.0-service
 
-# Memory
-PRODUCT_PACKAGES += \
-    android.hardware.memtrack@1.0-impl
-
 # NFC HIDL
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0-impl-bcm \
@@ -77,8 +74,8 @@ PRODUCT_PACKAGES += \
 
 # Power HIDL
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service \
-    android.hardware.power@1.0-impl
+    android.hardware.power@1.0-impl \
+    android.hardware.power@1.0-service
 
 # Radio
 PRODUCT_PACKAGES += \
