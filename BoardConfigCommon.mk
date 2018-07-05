@@ -25,15 +25,18 @@
 # Inherit from qcom-common
 -include device/samsung/qcom-common/BoardConfigCommon.mk
 
-# inherit from the proprietary version
--include vendor/samsung/jf-common/BoardConfigVendor.mk
+TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
+# ADB
+TARGET_USES_LEGACY_ADB_INTERFACE := true
 
 COMMON_PATH := device/samsung/jf-common
 
-TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
+# HIDL
+DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
-# ADB
-TARGET_USES_LEGACY_ADB_INTERFACE := true
+# inherit from the proprietary version
+-include vendor/samsung/jf-common/BoardConfigVendor.mk
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8960
@@ -98,8 +101,8 @@ WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # ALLOC_SVELTE := true
 TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
-#TARGET_NEEDS_GCC_LIBC := true
-#TARGET_USES_MEDIA_EXTENSIONS := true
+# TARGET_NEEDS_GCC_LIBC := true
+# TARGET_USES_MEDIA_EXTENSIONS := true
 
 # Charger
 BOARD_BATTERY_DEVICE_NAME := "battery"
@@ -123,10 +126,6 @@ EXTENDED_FONT_FOOTPRINT := true
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 TARGET_NO_RPC := true
-
-# HIDL
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
@@ -168,7 +167,6 @@ TARGET_USE_SDCLANG := true
 include device/qcom/sepolicy/sepolicy.mk
 include device/qcom/sepolicy/legacy-sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy
-
 BOARD_SECCOMP_POLICY += $(BOARD_PATH)/seccomp
 
 # Wifi module
