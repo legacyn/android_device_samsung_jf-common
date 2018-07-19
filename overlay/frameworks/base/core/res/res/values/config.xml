@@ -274,10 +274,6 @@
         <item>"/system/framework/arm/boot-core-libart.vdex"</item>
     </string-array>
 
-    <bool name="config_button_brightness_support">true</bool>
-
-    <integer name="config_button_brightness_default">10</integer>
-
     <!-- Enable Night display, which requires HWC 2.0. -->
     <bool name="config_nightDisplayAvailable">true</bool>
 
