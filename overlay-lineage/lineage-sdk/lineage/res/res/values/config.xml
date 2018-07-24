@@ -83,7 +83,7 @@
          LIGHTS_ADJUSTABLE_BATTERY_LED_BRIGHTNESS = 128
          For example, a device with notification and battery lights that supports
          pulsating and RGB control would set this config to 75. -->
-    <integer name="config_deviceLightCapabilities" translatable="false">75</integer>
+    <integer name="config_deviceLightCapabilities" translatable="false">107</integer>
 
     <!-- Indicate whether encryption causes significant performances loss.
          This MUST NOT be set to true on devices produced in 2016 or later -->
