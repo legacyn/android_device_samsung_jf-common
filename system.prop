@@ -13,6 +13,10 @@ use.voice.path.for.pcm.voip=false
 # Bluetooth
 ro.bt.bdaddr_path=/efs/bluetooth/bt_addr
 
+# Calls
+ro.telephony.call_ring.delay=0
+ring.delay=0	
+
 # Charger
 ro.enable_boot_charger_mode=1
 
@@ -26,12 +30,14 @@ ro.sf.lcd_density=420
 persist.gps.qc_nlp_in_use=1
 
 # Media
-#media.stagefright.legacyencoder=true
-#media.stagefright.less-secure=true
-#camera.disable_treble=true
 camera2.portability.force_api=1
 mm.enable.smoothstreaming=true
 persist.media.treble_omx=false
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=false
+media.stagefright.enable-http=true
+video.accelerate.hw=1
 
 # NFC
 ro.nfc.port=I2C
@@ -51,6 +57,8 @@ persist.radio.use_se_table_only=1
 ro.telephony.mms_data_profile=5
 persist.radio.add_power_save=1
 persist.radio.apm_sim_not_pwdn=1
+ro.ril.disable.power.collapse=0
+pm.sleep_mode=1
 rild.libpath=/system/vendor/lib/libril-qc-qmi-1.so
 
 # Tethering
