@@ -23,7 +23,10 @@
 
 #define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 
-#define BTM_WBS_INCLUDED TRUE       /* Enable WBS */
-#define BTIF_HF_WBS_PREFERRED FALSE  /* Use WBS    */
+
+#define BLE_VND_INCLUDED   TRUE
+#define BLE_PRIVACY_SPT    FALSE
+#define BTIF_HF_WBS_PREFERRED FALSE /* Don't prefer WBS    */
+
 
 #endif
