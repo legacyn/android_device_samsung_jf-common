@@ -91,7 +91,7 @@ vendor/lib/libQSEEComAPI.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/libloc_ds_api.so
-vendor//libloc_api_v02.so
+vendor/libloc_api_v02.so
 
 # Graphics
 vendor/lib/egl/eglsubAndroid.so
