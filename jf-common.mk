@@ -19,7 +19,7 @@ $(LOCAL_PATH) := device/samsung/jf-common
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Get non-open-source specific aspects if available
-$(call inherit-product-if-exists, vendor/samsung/jf-common/jf-common-vendor-blobs.mk)
+$(call inherit-product-if-exists, vendor/samsung/jf-common/jf-common-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
