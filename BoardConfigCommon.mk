@@ -89,10 +89,6 @@ TARGET_PROVIDES_CAMERA_HAL := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 #TARGET_LD_SHIM_LIBS := /system/vendor/bin/mm-qcamera-daemon|libshim_camera.so
 
-# dexpreopt
-WITH_DEXPREOPT := true
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-
 # Legacy hacks
 TARGET_HAS_LEGACY_CAMERA_HAL1 := true
 # ALLOC_SVELTE := true
