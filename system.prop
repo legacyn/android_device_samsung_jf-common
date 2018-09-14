@@ -67,6 +67,3 @@ ro.build.shutdown_timeout=5
 
 # WiFi
 wifi.interface=wlan0
-
-# RR
-# ro.rr.maintainer=Buff Buffster (Buff99)
